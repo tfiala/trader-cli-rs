@@ -1,3 +1,9 @@
+use colored::Colorize;
+
 fn main() {
-    println!("Hello, world!");
+    println!(
+        "Hello, {}!\n\n{}",
+        "trader".bright_white().bold(),
+        "More coming soon...".white().italic()
+    );
 }

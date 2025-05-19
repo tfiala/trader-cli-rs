@@ -2,8 +2,16 @@
 name = "trader-cli"
 version = "0.1.0"
 edition = "2024"
+license = "MIT"
+description = "CLI for accessing brokerage and market data."
+repository = "https://github.com/tfiala/trader-cli-rs"
 
 [dependencies]
+brokerage-messages = "0.1.8"
+clap = { version = "4.5.38", features = ["derive"] }
+colored = "3.0.0"
+reqwest = "0.12.15"
+tokio = { version = "1.45.0", features = ["full"] }
 
 [dev-dependencies]
 version-sync = "0.9.5"
