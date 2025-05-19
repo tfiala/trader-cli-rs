@@ -1,3 +1,5 @@
+mod command_handlers;
+
 use anyhow::Result;
 use clap::{Args, Parser, Subcommand};
 use colored::Colorize;
@@ -46,6 +48,8 @@ async fn main() -> Result<()> {
     let arg_str = format!("{:?}", args);
     println!("args: {}", arg_str.bright_white());
     println!("Connecting to server: {}", server_uri);
+
+    command_handlers::handle_command(args, server_uri).await?;
 
     Ok(())
 }
